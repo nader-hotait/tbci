@@ -295,6 +295,7 @@ DT::datatable(student_data)</code></pre>
 </div>
 <div id="task-1-1" class="section level3">
 <h3>Task 1</h3>
+<p><strong>SUMMARY: Potential Outcomes and Random Assignment Groups tend to be independent. The opposite is true for Self-selection Assignment Groups</strong></p>
 <p><strong>Creating a function to ease the work (Chi² test mostly not reliable)</strong></p>
 <pre class="r"><code>ind_test &lt;- function(y,x){
   cor &lt;- cor.test(y,x)
@@ -403,7 +404,7 @@ DT::datatable(student_data)</code></pre>
 </tr>
 </tbody>
 </table>
-<p><strong>Potential outcome under treatment <span class="math inline">\(Y_1\)</span> &amp; Self-selection Assignment <span class="math inline">\(D_s\)</span> = Independent (<span class="math inline">\(p-Value &lt; 0.05\)</span>)</strong></p>
+<p><strong>Potential outcome under treatment <span class="math inline">\(Y_1\)</span> &amp; Self-selection Assignment <span class="math inline">\(D_s\)</span> = Not Independent (<span class="math inline">\(p-Value &lt; 0.05\)</span>)</strong></p>
 <pre class="r"><code>ind_test(student_data$Y1,student_data$D_s)</code></pre>
 <pre><code>## Warning in chisq.test(table(y, x)): Chi-squared approximation may be incorrect</code></pre>
 <table>
